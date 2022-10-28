@@ -1,0 +1,9 @@
+private static class ViewHolder{
+        // Somente essa classe tem acesso a esse método por ser private
+        // Será executado uma vez por ser static
+        EditText editvalue;
+        TextView textViewNumeorDolar;
+        TextView textViewNumeroEuro;
+        Button buttonCalcular;
+    }
+    private final ViewHolder mViewHolder = new ViewHolder();
