@@ -6,15 +6,19 @@ private static class ViewHolder{
         TextView textViewNumeroEuro;
         Button buttonCalcular;
     }
+
     private final ViewHolder mViewHolder = new ViewHolder();
+       
     
-    // ON CREATE--------------------------------------------------
-    
-    this.mViewHolder.editvalue = findViewById(R.id.editTextNumberReal);
+   @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        this.mViewHolder.editvalue = findViewById(R.id.editTextNumberReal);
         this.mViewHolder.textViewNumeorDolar = findViewById(R.id.textViewResultadoDolar);
         this.mViewHolder.textViewNumeroEuro = findViewById(R.id.textViewResultadoEuro);
         this.mViewHolder.buttonCalcular = findViewById(R.id.buttonCalcular);
 
         this.mViewHolder.buttonCalcular.setOnClickListener(this);
-        
-     //-----------------------------------------------------------
+    }
